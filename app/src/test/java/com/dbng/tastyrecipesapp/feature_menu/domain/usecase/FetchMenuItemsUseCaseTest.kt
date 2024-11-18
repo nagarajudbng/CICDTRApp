@@ -5,8 +5,10 @@ import com.dbng.tastyrecipesapp.core.domain.utils.ResponseError
 import com.dbng.tastyrecipesapp.feature_menu.domain.model.MenuItem
 import com.dbng.tastyrecipesapp.feature_menu.domain.repository.MenuRepository
 import com.nhaarman.mockitokotlin2.whenever
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.TestCoroutineDispatcher
+import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.runTest
 import org.junit.After
 import org.junit.Assert
@@ -21,7 +23,8 @@ import org.mockito.MockitoAnnotations
 class FetchMenuItemsUseCaseTest {
     private lateinit var menuRepository: MenuRepository
     private lateinit var fetchMenuItemsUseCase: FetchMenuItemsUseCase
-    private val testDispatcher = StandardTestDispatcher()
+    @OptIn(ExperimentalCoroutinesApi::class)
+    private val testDispatcher = UnconfinedTestDispatcher()
     @Before
     fun setUp() {
         MockitoAnnotations.initMocks(this)
