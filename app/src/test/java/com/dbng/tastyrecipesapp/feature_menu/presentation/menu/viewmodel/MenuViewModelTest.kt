@@ -9,6 +9,7 @@ import com.dbng.tastyrecipesapp.feature_menu.domain.usecase.MenuItemMoreInfoUseC
 import com.dbng.tastyrecipesapp.feature_menu.presentation.menu.utils.MenuUIState
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.test.StandardTestDispatcher
+import kotlinx.coroutines.test.TestCoroutineDispatcher
 import kotlinx.coroutines.test.resetMain
 import kotlinx.coroutines.test.runTest
 import kotlinx.coroutines.test.setMain
@@ -30,7 +31,7 @@ class MenuViewModelTest {
     private lateinit var repository: MenuRepository
     private lateinit var fetchMenuItemsUseCase: FetchMenuItemsUseCase
     private lateinit var menuItemMoreInfoUseCase: MenuItemMoreInfoUseCase
-    private val testDispatcher = StandardTestDispatcher()
+    private val testDispatcher = TestCoroutineDispatcher()
 
     @Before
     fun setUp() {
