@@ -28,7 +28,7 @@ import org.mockito.MockitoAnnotations
 
 class MenuViewModelTest {
 
-    
+
     private lateinit var viewModel: MenuViewModel
     private lateinit var repository: MenuRepository
     private lateinit var fetchMenuItemsUseCase: FetchMenuItemsUseCase
