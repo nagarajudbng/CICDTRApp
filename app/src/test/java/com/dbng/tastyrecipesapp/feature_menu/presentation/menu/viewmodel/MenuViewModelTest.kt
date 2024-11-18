@@ -8,6 +8,7 @@ import com.dbng.tastyrecipesapp.feature_menu.domain.usecase.FetchMenuItemsUseCas
 import com.dbng.tastyrecipesapp.feature_menu.domain.usecase.MenuItemMoreInfoUseCase
 import com.dbng.tastyrecipesapp.feature_menu.presentation.menu.utils.MenuUIState
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.TestCoroutineDispatcher
 import kotlinx.coroutines.test.resetMain
 import kotlinx.coroutines.test.runTest
