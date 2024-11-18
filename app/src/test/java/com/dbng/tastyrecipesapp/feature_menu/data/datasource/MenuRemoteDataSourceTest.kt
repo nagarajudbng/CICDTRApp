@@ -3,6 +3,7 @@ package com.dbng.tastyrecipesapp.feature_menu.data.datasource
 import com.dbng.tastyrecipesapp.feature_menu.data.model.menuresponse.MenuItem
 import com.dbng.tastyrecipesapp.feature_menu.data.model.menuresponse.MenuResponse
 import com.dbng.tastyrecipesapp.feature_menu.data.network.MenuApiService
+import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.TestCoroutineDispatcher
 import kotlinx.coroutines.test.runTest
 import okhttp3.ResponseBody
@@ -21,7 +22,7 @@ class MenuRemoteDataSourceTest {
 
     private lateinit var menuRemoteDataSource: MenuRemoteDataSource
     private lateinit var menuApiService: MenuApiService
-    private val testDispatcher = TestCoroutineDispatcher()
+    private val testDispatcher = StandardTestDispatcher()
 
     @Before
     fun setUp() {
