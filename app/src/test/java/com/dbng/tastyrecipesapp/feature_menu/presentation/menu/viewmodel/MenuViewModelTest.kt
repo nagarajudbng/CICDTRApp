@@ -97,7 +97,7 @@ class MenuViewModelTest {
         val size = 20
         `when`(fetchMenuItemsUseCase(from,size)).thenReturn(Resource.Error(null,responseError = ResponseError.NetworkError))
         viewModel.fetchMenuList()
-        assertTrue(viewModel.menuState.value is MenuUIState.Success)
+        assertTrue(viewModel.menuState.value is MenuUIState.Error)
         assertEquals("Network Error", (viewModel.menuState.value as MenuUIState.Error).message)
 
     }
