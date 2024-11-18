@@ -10,7 +10,7 @@ import com.dbng.tastyrecipesapp.feature_menu.data.network.MenuApiService
 import com.dbng.tastyrecipesapp.feature_menu.domain.repository.MenuRepository
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.whenever
-import kotlinx.coroutines.test.TestCoroutineDispatcher
+import kotlinx.coroutines.test.StandardTestDispatcher
 import kotlinx.coroutines.test.runBlockingTest
 import kotlinx.coroutines.test.runTest
 import okhttp3.ResponseBody
@@ -37,7 +37,7 @@ class MenuRepositoryImplTest {
     private lateinit var menuRemoteDataSource: MenuRemoteDataSource
     private lateinit var menuRepository: MenuRepository
     private lateinit var menuApiService: MenuApiService
-    private val testDispatcher = TestCoroutineDispatcher()
+    private val testDispatcher = StandardTestDispatcher()
     @Before
     fun setUp() {
         MockitoAnnotations.initMocks(this)
