@@ -3,7 +3,6 @@ package com.dbng.tastyrecipesapp.feature_menu.domain.usecase
 import com.dbng.tastyrecipesapp.feature_menu.domain.repository.MenuRepository
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.StandardTestDispatcher
-import kotlinx.coroutines.test.TestCoroutineDispatcher
 import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.runTest
 import org.junit.After
